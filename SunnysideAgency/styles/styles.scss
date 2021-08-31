@@ -1,0 +1,166 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
+.creative-content{
+    background: url("../images/desktop/image-header.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 720px;
+    padding: 50px 70px 140px;
+    color: $white-color;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul{
+        display:flex;
+        align-items: center;
+
+        li{
+            font-size: 17px;
+        }
+
+        li:not(:last-child)
+        {
+            margin-right: 50px;
+        }
+    }
+
+    h1{
+        width: 50%;
+        margin: 5% auto;        
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 55px;
+        font-family: Montserrat, sans-serif;
+    }
+}
+
+.middle-section-content{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    
+    div{
+        height: 500px;
+    }
+
+    div:first-of-type,
+    div:nth-child(4){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $light-color;
+
+        h2{
+            font-size: 40px;
+        }
+
+        &>p, &>h2, &>a {
+            width: 55%;
+            padding: 30px 10px;
+            text-decoration: none;
+        }
+
+        a{
+            color: $dark-color;
+            text-transform: uppercase;
+        }
+    }
+
+    div:nth-child(2){
+        background: url('../images/desktop/image-transform.jpg') no-repeat center;
+        background-size: cover;
+        
+    }
+
+    div:nth-child(3) {
+        background: url('../images/desktop/image-stand-out.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    div:nth-child(5) {
+        background: url('../images/desktop/image-graphic-design.jpg') no-repeat center top;
+        background-size: cover;
+        @include flexDisplay;
+
+        &>p {
+            width: 50%;
+            padding: 30px 20px;
+            text-align: center;
+        }
+    }
+
+    div:nth-child(6) {
+        background: url('../images/desktop/image-photography.jpg') no-repeat center top;
+        background-size: cover;
+        @include flexDisplay;
+        
+        &>p {
+            width: 50%;
+            padding: 30px 20px;
+            text-align: center;
+        }
+    }
+
+    h3 {
+        color: $dark-blue-color;
+        width: 80%;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.testimonials{
+    background-color: $light-color;
+    padding: 140px;
+
+    .testimonials-content{
+        display: flex;
+    }
+
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 30px;
+        
+
+        img{
+            width: 80px;
+            height: 80px;
+            margin: 50px 0;
+            border-radius: 50%;
+        }
+
+        p{
+            width: 80%;
+            margin: 25px 0 50px;
+            text-align: center;
+        }
+
+        h5{
+            padding: 5px 0;
+            color: darkgray;
+        }
+    }
+
+
+    & > h2 {
+        margin: 0 auto;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: Montserrat, sans-serif;
+    }
+}
