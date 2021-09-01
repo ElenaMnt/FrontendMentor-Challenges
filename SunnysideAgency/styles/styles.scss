@@ -1,16 +1,26 @@
 @import 'reset';
 @import 'variables';
 @import 'mixins';
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces&display=swap");
+@use "sass:lint";
 
+.arrow-down {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
 
 .creative-content{
     background: url("../images/desktop/image-header.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     height: 720px;
-    padding: 50px 70px 140px;
+    padding: 25px 70px 140px;
     color: $white-color;
+    font-family: Barlow, sans-serif;
 
     header {
         display: flex;
@@ -18,17 +28,30 @@
         align-items: center;
     }
 
-    nav ul{
-        display:flex;
-        align-items: center;
-
+    nav{
+        
         li{
+            display: inline-block;
+            font-family: Barlow, sans-serif;
             font-size: 17px;
+            padding: 10px;
         }
 
         li:not(:last-child)
         {
-            margin-right: 50px;
+            margin-right: 75px;
+            margin-left: 10;
+        }
+
+        li:hover{
+            border-radius: 30px;
+            background: $blue-color;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: 'Barlow', serif;
+            font-size: 16px;
+            padding: 10px;
+            cursor: pointer;
         }
     }
 
@@ -39,7 +62,7 @@
         text-align: center;
         text-transform: uppercase;
         font-size: 55px;
-        font-family: Montserrat, sans-serif;
+        font-family: Fraunces, sans-serif;
     }
 }
 
@@ -60,6 +83,7 @@
         justify-content: center;
         background-color: $light-color;
 
+
         h2{
             font-size: 40px;
         }
@@ -68,11 +92,13 @@
             width: 55%;
             padding: 30px 10px;
             text-decoration: none;
+            font-family: Fraunces, sans-serif;
         }
 
         a{
             color: $dark-color;
             text-transform: uppercase;
+            font-weight: 700;
         }
     }
 
@@ -96,6 +122,7 @@
             width: 50%;
             padding: 30px 20px;
             text-align: center;
+            font-family: Fraunces, sans-serif;
         }
     }
 
@@ -107,7 +134,8 @@
         &>p {
             width: 50%;
             padding: 30px 20px;
-            text-align: center;
+            text-align: center; 
+            font-family: Fraunces, sans-serif;
         }
     }
 
@@ -134,7 +162,6 @@
         align-items: center;
         padding: 25px 30px;
         
-
         img{
             width: 80px;
             height: 80px;
@@ -143,9 +170,13 @@
         }
 
         p{
-            width: 80%;
+            width: 100%;
             margin: 25px 0 50px;
             text-align: center;
+            letter-spacing: 1px;
+            color: $dark-gray-color;
+            font-family: Barlow, sans-serif;
+            font-weight: 600;
         }
 
         h5{
@@ -157,10 +188,70 @@
 
     & > h2 {
         margin: 0 auto;
-        letter-spacing: 3px;
+        color: $gray-color;
+        letter-spacing: 4px;
         text-align: center;
         text-transform: uppercase;
         font-size: 20px;
-        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-family: Fraunces, sans-serif;
+    }
+}
+
+.image-container{
+    display: flex;
+    width: 100%;
+
+    div{
+        height: 500px;
+        width: 100%;
+    }
+
+    $images: 'gallery-milkbottles', 'gallery-orange', 'gallery-cone', 'gallery-sugarcubes';
+
+    @each $idx in $images {
+
+        $i: index($images, $idx);
+
+        div:nth-child(#{$i}) {
+            background: url("../images/desktop/image-#{$idx}.jpg") no-repeat center;
+            background-size: cover;
+            
+        }
+    }
+}
+
+footer{
+    background-color: $cyan-color;
+    color: $dark-cyan-color;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 20px 0;
+
+        i{
+            margin: 50px 15px 0;
+        }
+    }
+
+    img{
+        color: $dark-cyan-color;
+        padding: 10px 0 30px;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        font-family: Barlow, sans-serif;
+        font-weight: 600;
+
+        li{
+            margin: 0 25px;
+        }
     }
 }
