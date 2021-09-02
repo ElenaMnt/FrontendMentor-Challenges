@@ -30,7 +30,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 720px;
-  padding: 25px 70px 140px;
+  padding: 25px 60px 120px;
   color: #fefeff;
   font-family: Barlow, sans-serif;
 }
@@ -55,8 +55,7 @@ body {
 }
 
 .creative-content nav li:not(:last-child) {
-  margin-right: 75px;
-  margin-left: 10;
+  margin-right: 45px;
 }
 
 .creative-content nav li:hover {
@@ -71,13 +70,18 @@ body {
 }
 
 .creative-content h1 {
-  width: 50%;
+  width: 100%;
+  padding-top: 15px;
   margin: 5% auto;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
   font-size: 55px;
   font-family: Fraunces, sans-serif;
+}
+
+.creative-content .nav-hamburger {
+  display: none;
 }
 
 .middle-section-content {
@@ -202,7 +206,7 @@ body {
 
 .testimonials {
   background-color: #fffaf8;
-  padding: 140px;
+  padding: 120px;
 }
 
 .testimonials .testimonials-content {
@@ -225,7 +229,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 25px 30px;
+  padding: 25px 15px;
 }
 
 .testimonials article img {
@@ -343,5 +347,60 @@ footer ul {
 
 footer ul li {
   margin: 0 25px;
+}
+
+@media screen and (max-width: 730px) {
+  .creative-content .nav-ul {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 55%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .creative-content .nav-ul li:hover {
+    background-color: #ffee00;
+    text-transform: uppercase;
+    color: black;
+  }
+  .creative-content .nav-ul.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creative-content h1.remove {
+    display: none;
+  }
+  .creative-content .nav-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .middle-section-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonials .testimonials-content {
+    display: block;
+  }
+  .testimonials p {
+    width: 100%;
+  }
+  .image-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
