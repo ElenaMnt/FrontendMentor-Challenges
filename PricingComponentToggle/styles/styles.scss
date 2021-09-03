@@ -1,0 +1,103 @@
+@import 'reset';
+@import 'variables';
+@import url(https://fonts.google.com/specimen/Montserrat);
+
+body{
+    background-color: $very-light-blue-color;
+    background-image: url(../images/bg-top.svg),
+    url(../images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    overflow: hidden;
+}
+
+
+
+header{
+
+    h1{
+        margin: 60px 0 0;
+        text-align: center;
+        font-family: Montserrat, sans-serif;
+        color: $gray-blue-color;
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        font-family: Montserrat, sans-serif;
+        color: $light-gray-blue-color;
+        margin-bottom: 15px;
+
+        > * :not(.last-child){
+            margin-right: 10px;
+        }
+    }
+
+    .toggle-control{
+        display: inline-block;
+        height: 1em;
+        width: 2em;
+        background: #BDB9A6;
+        border-radius: 1em;
+        padding: -0 5px;
+        margin: 0 10px;
+        
+        .switch{
+
+        }
+    }
+}
+
+.pricing-cards{
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    
+
+    > div{
+        height: 400px;
+        width: 300px;
+       
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 1rem;
+
+        h3{    
+          color: $gray-blue-color;
+          margin: 40px 0 20px;
+        }
+
+        .boxLine {
+            padding: 16px 0;
+            border-top: 0.05px solid $light-gray-blue-color;
+        }
+
+        .boxLine:nth-child(3){
+            border-bottom: 0.05 solid $light-gray-blue-color;
+        }
+
+        .boxPrice{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0 30px;
+            font-size: 50px;
+            font-weight: 700;
+            color: $dark-gray-blue-color;
+            
+
+            .priceDollar{
+                font-size: 30px;
+            }
+        }
+
+        .btn{
+
+            background-image: linear-gradient(hsl(236, 72%, 79%) to hsl(237, 63%, 64%));
+            padding: 7px 75px;
+            border-radius: 5px;
+        }
+    }
+}
