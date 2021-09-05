@@ -180,3 +180,19 @@ header{
         }
     }
 }
+
+@media  (max-width: 1030px) {
+    body{
+        width: 100%;
+        overflow: auto;
+    }
+
+    .pricing-cards{
+        display: flex;
+        flex-direction: column;
+
+        .cards{
+            margin: 15px 0 15px;
+        }
+    }
+}
