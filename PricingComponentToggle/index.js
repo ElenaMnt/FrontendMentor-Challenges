@@ -1,5 +1,5 @@
 const toggleBtn = document.querySelector('.toggleBtn');
-let boxPrice = document.getElementsByClassName('boxPrice');
+const boxPrice = document.getElementsByClassName('boxPrice');
 const monthlyPrices = ["19.99", "24.99", "39.99"];
 const annualPrices = ["199.99", "249.99", "399.99"];
 
