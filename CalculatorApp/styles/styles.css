@@ -1,0 +1,82 @@
+@import url(https://fonts.google.com/specimen/Spartan);
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-weight: 700;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  background: #3a4764;
+  overflow: hidden;
+}
+
+main {
+  width: 350px;
+  margin: 250px auto;
+  display: block;
+}
+
+main nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section {
+  display: block;
+}
+
+main section div.screen {
+  height: 75px;
+  border-radius: 5px;
+  font-size: 32px;
+  background-color: #182034;
+  color: white;
+  margin: 15px 0;
+}
+
+main section div.screen span {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 15px 0 0;
+}
+
+main section .action-buttons {
+  height: 250px;
+  background-color: #232c43;
+  border-radius: 5px;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+main section .action-buttons button {
+  border-radius: 5px;
+  background-color: #eae3dc;
+  font-size: 22px;
+}
+/*# sourceMappingURL=styles.css.map */

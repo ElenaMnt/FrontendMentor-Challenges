@@ -1,0 +1,59 @@
+@import 'reset';
+@import 'variables';
+@import url(https://fonts.google.com/specimen/Spartan);
+
+body{
+    font-family: 'Spartan', sans-serif;
+    background: $main-dark-blue;
+    overflow: hidden;
+}
+
+main{
+    width: 350px;
+    margin: 250px auto;
+    display: block;
+    
+
+    nav{
+        display: flex;
+    }
+
+    section{
+        display: block;
+
+        div.screen {
+            height: 75px;
+            border-radius: 5px;
+            font-size: 32px;
+            background-color: hsl(224, 36%, 15%);
+            color: $white-color;
+            margin: 15px 0;
+
+            span{
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 0 15px 0 0;
+            }
+        }
+       
+        .action-buttons{
+            height: 250px;
+            background-color: hsl(223, 31%, 20%);
+            border-radius: 5px;
+            padding: 15px;
+            display: grid;
+            grid-gap: 15px;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+
+            button{
+                border-radius: 5px;
+                background-color: $key-background-light-orange;
+                font-size: 22px;
+            }
+        }
+        
+    }
+}
