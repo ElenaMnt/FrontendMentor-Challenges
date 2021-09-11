@@ -6,16 +6,64 @@ body{
     font-family: 'Spartan', sans-serif;
     background: $main-dark-blue;
     overflow: hidden;
+    height: 100vh;
 }
 
 main{
     width: 350px;
-    margin: 250px auto;
+    margin: 5% auto;
     display: block;
     
 
     nav{
         display: flex;
+        
+        >*{
+            color: $white-color;
+            padding: 10px 0;
+        }
+
+        p{
+            margin-left: 61%;
+            margin-top: 20px;
+            padding-right: 13px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 300;
+
+        }
+  
+        button{
+            position: relative;
+            background-color: $toggle-dark-blue;
+            height: 14px;
+            width: 40px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button::after{
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 10px;
+            position: absolute;
+            left: 2.5px;
+            transform: translateY(-50%);
+            background-color: $key-background-toggle-red;
+        }
+
+        button.checked::after {
+            transform: translate(-8px, -50%);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     section{
@@ -39,19 +87,23 @@ main{
         }
        
         .action-buttons{
-            height: 250px;
             background-color: hsl(223, 31%, 20%);
             border-radius: 5px;
             padding: 15px;
             display: grid;
-            grid-gap: 15px;
+            grid-gap: 12px;
             grid-template-rows: repeat(5, 1fr);
             grid-template-columns: repeat(4, 1fr);
 
             button{
-                border-radius: 5px;
+                width: 60px;
+                height: 37px;
+                border: none;
+                border-radius: 6px;
                 background-color: $key-background-light-orange;
                 font-size: 22px;
+
+
             }
         }
         
